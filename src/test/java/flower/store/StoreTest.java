@@ -14,29 +14,29 @@ public class StoreTest {
     public void testSearch() {
         FlowerBucket flowerBucket = new FlowerBucket();
 
-        // generating two flowerpacks for flowerBucket
+        // generating two packs for flower Bucket.
         int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
         int quantity = RANDOM_GENERATOR.nextInt(MAX_QUANTITY);
         Flower flower = new Rose();
         flower.setPrice(price);
         FlowerPack flowerPack = new FlowerPack(flower, quantity);
 
-        int price1 = RANDOM_GENERATOR.nextInt(MAX_PRICE);
-        int quantity1 = RANDOM_GENERATOR.nextInt(MAX_QUANTITY);
-        Flower flower1 = new Tulip();
-        flower.setPrice(price1);
-        FlowerPack flowerPack1 = new FlowerPack(flower1, quantity1);
+        int priceOne = RANDOM_GENERATOR.nextInt(MAX_PRICE);
+        int quantityOne = RANDOM_GENERATOR.nextInt(MAX_QUANTITY);
+        Flower flowerOne = new Tulip();
+        flower.setPrice(priceOne);
+        FlowerPack flowerPackOne = new FlowerPack(flowerOne, quantityOne);
 
         // adding flowerPacks to the flowerBucket
         flowerBucket.add(flowerPack);
-        flowerBucket.add(flowerPack1);
+        flowerBucket.add(flowerPackOne);
 
         // generating a searchFlowerPack
-        int price2 = RANDOM_GENERATOR.nextInt(MAX_PRICE);
-        int quantity2 = RANDOM_GENERATOR.nextInt(MAX_QUANTITY);
-        Flower flower2 = new Rose();
-        flower.setPrice(price2);
-        FlowerPack flowerPack2 = new FlowerPack(flower2, quantity2);
+        int priceTwo = RANDOM_GENERATOR.nextInt(MAX_PRICE);
+        int quantityTwo = RANDOM_GENERATOR.nextInt(MAX_QUANTITY);
+        Flower flowerTwo = new Rose();
+        flower.setPrice(priceTwo);
+        FlowerPack flowerPackTwo = new FlowerPack(flowerTwo, quantityTwo);
 
 
         Store store = new Store();
@@ -45,9 +45,10 @@ public class StoreTest {
         FlowerBucket testBucket = new FlowerBucket();
         testBucket.add(flowerPack);
 
-        FlowerBucket roseSearchBucket = store.search(flowerPack2);
+        FlowerBucket roseSearchBucket = store.search(flowerPackTwo);
 
-        Assertions.assertEquals(roseSearchBucket.toString(), (testBucket.toString()));
+        Assertions.assertEquals(roseSearchBucket.toString(),
+                (testBucket.toString()));
     }
 
 }

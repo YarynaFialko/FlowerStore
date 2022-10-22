@@ -14,10 +14,10 @@ public enum FlowerType {
 
     /**
      * Sets a string representation of the flower type.
-     * @param stringRepresentation - String og the flower type.
+     * @param stringRep - String og the flower type.
      */
-    FlowerType(final String stringRepresentation) {
-        this.stringRepresentation = stringRepresentation;
+    FlowerType(final String stringRep) {
+        this.stringRepresentation = stringRep;
     }
 
     @Override

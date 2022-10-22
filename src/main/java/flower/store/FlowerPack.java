@@ -12,12 +12,12 @@ public final class FlowerPack {
 
     /**
      * Sets parameters of the FlowerPack object.
-     * @param flower - Flower class.
-     * @param quantity - number of the flower in the pack.
+     * @param flType - Flower class.
+     * @param flQuantity - number of the flower in the pack.
      */
-    public FlowerPack(final Flower flower, final int quantity) {
-        this.flower = flower;
-        this.quantity = quantity;
+    public FlowerPack(final Flower flType, final int flQuantity) {
+        this.flower = flType;
+        this.quantity = flQuantity;
     }
 
     /**

@@ -9,12 +9,12 @@ public class FlowerTest {
     private static final Random RANDOM_GENERATOR = new Random();
     private static final int MAX_PRICE = 100;
     private Flower flower;
-    private Flower flower1;
+    private Flower flowerOne;
 
     @BeforeEach
     public void init() {
         flower = new Flower();
-        flower1 = new Flower();
+        flowerOne = new Flower();
     }
 
     @Test
@@ -30,9 +30,9 @@ public class FlowerTest {
         flower.setColor(color);
         Assertions.assertEquals("#FF0000", flower.getColor());
 
-        FlowerColor color1 = FlowerColor.BLUE;
-        flower1.setColor(color1);
-        Assertions.assertEquals("#0000FF", flower1.getColor());
+        FlowerColor colorOne = FlowerColor.BLUE;
+        flowerOne.setColor(colorOne);
+        Assertions.assertEquals("#0000FF", flowerOne.getColor());
     }
 
     @Test
