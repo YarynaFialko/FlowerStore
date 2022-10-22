@@ -8,7 +8,7 @@ public final class Tulip extends Flower {
 
     /**
      * Gets the Type of the flower.
-     * @ return  a String value of the type.
+     * @return  a String value of the type.
      */
     public String getType() {
         return flowerType.toString();

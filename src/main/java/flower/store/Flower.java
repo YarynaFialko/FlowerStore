@@ -27,7 +27,7 @@ public class Flower {
 
     /**
      * Gets a flower's color.
-     * @return  a stringvalue of the color.
+     * @return  a string value of the color.
      */
     public String getColor() {
         if (color != null) {
@@ -46,16 +46,17 @@ public class Flower {
 
     /**
      * Compares two flowers.
-     * @param flower - the compared flower.
+     * @param comFlower - the compared flower.
      * @return boolean if the flowers match.
      */
-    public boolean compare(final Flower flower) {
-        boolean color = this.getColor().equals(flower.getColor());
-        if (this.getColor().equals("") && flower.getColor().equals("")) {
-            color = false;
+    @SuppressWarnings("checkstyle:HiddenField")
+    public boolean compare(final Flower comFlower) {
+        boolean comColor = this.getColor().equals(comFlower.getColor());
+        if (this.getColor().equals("") && comFlower.getColor().equals("")) {
+            comColor = false;
         }
-        boolean type = this.getType().equals(flower.getType());
-        return color || type;
+        boolean type = this.getType().equals(comFlower.getType());
+        return comColor || type;
     }
 
     /**
