@@ -2,9 +2,7 @@ package flower.store;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.util.Random;
-
 import org.junit.jupiter.api.Assertions;
 
 public class FlowerTest {
@@ -29,5 +27,16 @@ public class FlowerTest {
         FlowerColor color = FlowerColor.RED;
         flower.setColor(color);
         Assertions.assertEquals("#FF0000", flower.getColor());
+    }
+
+    @Test
+    public void testType(){
+        FlowerType flowerType= FlowerType.ROSE;
+        flower.setFlowerType(flowerType);
+        Assertions.assertEquals("Rose", flower.getType());
+
+
+        Flower chamomile = new Chamomile();
+        Assertions.assertEquals("Chamomile", chamomile.getType());
     }
 }
