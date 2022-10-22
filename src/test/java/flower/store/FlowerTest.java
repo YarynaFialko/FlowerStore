@@ -9,10 +9,12 @@ public class FlowerTest {
     private static final Random RANDOM_GENERATOR = new Random();
     private static final int MAX_PRICE = 100;
     private Flower flower;
+    private Flower flower1;
 
     @BeforeEach
     public void init() {
         flower = new Flower();
+        flower1 = new Flower();
     }
 
     @Test
@@ -27,10 +29,14 @@ public class FlowerTest {
         FlowerColor color = FlowerColor.RED;
         flower.setColor(color);
         Assertions.assertEquals("#FF0000", flower.getColor());
+
+        FlowerColor color1 = FlowerColor.BLUE;
+        flower1.setColor(color1);
+        Assertions.assertEquals("#0000FF", flower1.getColor());
     }
 
     @Test
-    public void testType(){
+    public void testType() {
         FlowerType flowerType= FlowerType.ROSE;
         flower.setFlowerType(flowerType);
         Assertions.assertEquals("Rose", flower.getType());
