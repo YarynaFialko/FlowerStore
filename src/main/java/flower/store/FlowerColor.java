@@ -12,11 +12,11 @@ public enum FlowerColor {
 
     /**
      * Sets a color stringRepresentation.
-     * @param stringRepresentation - String representation
+     * @param stringRep - String representation
      *                             of the color type.
      */
-    FlowerColor(final String stringRepresentation) {
-        this.stringRepresentation = stringRepresentation;
+    FlowerColor(final String stringRep) {
+        this.stringRepresentation = stringRep;
     }
 
     @Override

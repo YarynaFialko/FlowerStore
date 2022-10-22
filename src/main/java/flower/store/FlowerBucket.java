@@ -21,7 +21,7 @@ public final class FlowerBucket {
 
     /**
      * Calculates a price of the bucket.
-     * @return duble prize of the whole bucket.
+     * @return double prize of the whole bucket.
      */
     double getPrice() {
         double price = 0;

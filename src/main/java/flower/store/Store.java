@@ -14,7 +14,7 @@ public final class Store {
      * Searches best matches with the searchedFlowerPack in the
      * store's FlowerBucket.
      * @param searchedFlowerPack - object of searched flower pack.
-     * @return  a FlowetBucket with the best matches.
+     * @return  a FlowerBucket with the best matches.
      */
     public FlowerBucket search(final FlowerPack searchedFlowerPack) {
         FlowerBucket matchingPacks = new FlowerBucket();
