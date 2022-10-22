@@ -37,7 +37,7 @@ public class FlowerTest {
 
     @Test
     public void testType() {
-        FlowerType flowerType= FlowerType.ROSE;
+        FlowerType flowerType = FlowerType.ROSE;
         flower.setFlowerType(flowerType);
         Assertions.assertEquals("Rose", flower.getType());
 
