@@ -4,26 +4,37 @@ import lombok.Getter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FlowerBucket {
+public final class FlowerBucket {
+    /**
+     * FlowerBucket implemented as a list of FlowerPacks.
+     */
     @Getter
     private final List<FlowerPack> bucket = new ArrayList<>();
 
-    void add(FlowerPack flowerPack){
+    /**
+     * Adds a flowerPack to the FlowerBucket.
+     * @param flowerPack - a set of flowers.
+     */
+    void add(final FlowerPack flowerPack) {
         bucket.add(flowerPack);
     }
-    double getPrice(){
+
+    /**
+     * Calculates a price of the bucket.
+     * @return duble prize of the whole bucket.
+     */
+    double getPrice() {
         double price = 0;
-        for(FlowerPack flowerPack : bucket){
+        for (FlowerPack flowerPack : bucket) {
             price += flowerPack.getPrice();
         }
         return price;
     }
 
-
     @Override
     public String toString() {
-        return "FlowerBucket{" +
-                "bucket=" + bucket +
-                '}';
+        return "FlowerBucket{"
+                + "bucket="
+                + bucket + '}';
     }
 }
