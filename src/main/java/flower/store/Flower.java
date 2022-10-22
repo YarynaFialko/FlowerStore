@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 
-
 @Setter
 public class Flower {
     @Getter
@@ -16,6 +15,31 @@ public class Flower {
     private FlowerType flowerType;
 
     public String getColor() {
-        return color.toString();
+        if (color != null) {
+            return color.toString();
+        } else {
+            return "";
+        }
+    }
+
+    public String getType() {
+        return flowerType.toString();
+    }
+
+    public boolean compare(Flower flower){
+        boolean color = (this.getColor().equals(flower.getColor()));
+        if (this.getColor().equals("") && flower.getColor().equals("")){color = false;}
+        boolean type = this.getType().equals(flower.getType());
+        return color || type;
+    }
+
+    @Override
+    public String toString() {
+        return "Flower{" +
+                "sepalLength=" + sepalLength +
+                ", color=" + color +
+                ", price=" + price +
+                ", flowerType=" + flowerType +
+                '}';
     }
 }
